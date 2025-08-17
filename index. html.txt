@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trầm Tích Ngôn Ngữ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Trầm Tích Ngôn Ngữ</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#learn">Học</a></li>
+                <li><a href="#review">Ôn tập</a></li>
+                <li><a href="#stats">Thống kê</a></li>
+            </ul>
+        </nav>
+        <div class="slogan">Dư âm Hán Việt - Khơi Mở tiếng Trung</div>
+    </header>
+
+    <main>
+        <section id="home" class="page active">
+            <h1>Chào mừng đến với Trầm Tích Ngôn Ngữ</h1>
+            <p>Khám phá sự giao thoa giữa Hán Việt và tiếng Trung...</p>
+        </section>
+
+        <section id="learn" class="page">
+            <h2>Trang Học</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm từ vựng...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab-button active" data-tab="dictionary">Từ điển</button>
+                <button class="tab-button" data-tab="flashcards">Flashcards</button>
+            </div>
+            
+            <div id="dictionary-tab" class="tab-content active">
+                <div id="dictionary-container"></div>
+            </div>
+            
+            <div id="flashcards-tab" class="tab-content">
+                <div id="flashcard-container"></div>
+            </div>
+        </section>
+
+        <section id="review" class="page">
+            <h2>Trang Ôn tập</h2>
+            <div id="quiz-options">
+                <p>Chọn chủ đề:</p>
+                <select id="topic-select"></select>
+                <button id="start-quiz-btn">Bắt đầu</button>
+            </div>
+            <div id="quiz-container" style="display: none;">
+                <div id="quiz-question"></div>
+                <div id="quiz-answers" class="quiz-answers"></div>
+                <div id="quiz-feedback"></div>
+            </div>
+            <div id="quiz-results" style="display: none;">
+                <h3>Kết quả</h3>
+                <p id="correct-count"></p>
+                <p id="incorrect-count"></p>
+                <button id="review-wrong-btn">Ôn lại câu sai</button>
+            </div>
+            <div id="review-wrong-container" style="display: none;">
+<h3>Các câu trả lời sai</h3>
+                <ul id="wrong-answers-list"></ul>
+            </div>
+        </section>
+
+        <section id="stats" class="page">
+            <h2>Trang Thống kê</h2>
+            <div class="stats-card">
+                <h3>Tỉ lệ đoán đúng/sai</h3>
+                <canvas id="correct-ratio-chart"></canvas>
+            </div>
+            <div class="stats-card">
+                <h3>Từ bị sai nhiều nhất</h3>
+                <ul id="most-missed-words"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="data/words.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

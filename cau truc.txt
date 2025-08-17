@@ -1,0 +1,7 @@
+chinese-learning-app/
+├── index.html
+├── style.css
+├── script.js
+└── data/
+    └── hsk1.json
+    └── images/  (Thư mục này trống, bạn có thể thêm ảnh vào sau)
